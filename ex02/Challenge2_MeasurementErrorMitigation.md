@@ -2,7 +2,7 @@
 
 Present day quantum computers are subject to noise of various kinds. The principle behind error mitigation is to reduce the effects from a specific source of error.  Here we will look at mitigating measurement errors, i.e., errors in determining the correct quantum state from measurements performed on qubits.
 
-<img src="mitigation.png" width="900"/>
+<img src="images/mitigation.png" width="900"/>
 <center>Measurement Error Mitigation</center>
 
 In the above picture, you can see the outcome of applying measurement error mitigation. On the left, the histogram shows results obtained using the device `ibmq_vigo`. The ideal result should have shown 50% counts $00000$ and 50% counts $10101$. Two features are notable here:
@@ -185,7 +185,7 @@ meas_fitter.plot_calibration()
 
 
 
-![png](output_8_1.png)
+![png](images/output_8_1.png)
 
 
 In the calibration plot you can see the correct outcomes on the diagonal, while all incorrect outcomes are off-diagonal. Most of the latter are due to T1 errors depolarizing the states from $|1\rangle$ to $|0\rangle$ during the measurement, which causes the matrix to be asymmetric.
@@ -208,7 +208,7 @@ plot_histogram(noisy_counts[0])
 
 
 
-![png](output_11_0.png)
+![png](images/output_11_0.png)
 
 
 
@@ -222,15 +222,15 @@ plot_histogram([mitigated_counts_0, noisy_counts[0]])
 
 
 
-![png](output_12_0.png)
+![png](images/output_12_0.png)
 
 
 
 ## Which of the following histograms most likely resembles the *error-free* counts of the same circuit?
-a) <img src="hist_1a.png" width="500"> 
-b) <img src="hist_1b.png" width="500"> 
-c) <img src="hist_1c.png" width="500"> 
-d) <img src="hist_1d.png" width="500">
+a) <img src="images/hist_1a.png" width="500"> 
+b) <img src="images/hist_1b.png" width="500"> 
+c) <img src="images/hist_1c.png" width="500"> 
+d) <img src="images/hist_1d.png" width="500">
 
 
 ```python
@@ -252,7 +252,7 @@ plot_histogram(noisy_counts[1])
 
 
 
-![png](output_16_0.png)
+![png](images/output_16_0.png)
 
 
 
@@ -267,15 +267,15 @@ plot_histogram([mitigated_counts_1, noisy_counts[1]])
 
 
 
-![png](output_17_0.png)
+![png](images/output_17_0.png)
 
 
 
 ## Which of the following histograms most likely resembles the *error-free* counts of the same circuit?
-a) <img src="hist_2a.png" width="500"> 
-b) <img src="hist_2b.png" width="500"> 
-c) <img src="hist_2c.png" width="500"> 
-d) <img src="hist_2d.png" width="500">
+a) <img src="images/hist_2a.png" width="500"> 
+b) <img src="images/hist_2b.png" width="500"> 
+c) <img src="images/hist_2c.png" width="500"> 
+d) <img src="images/hist_2d.png" width="500">
 
 
 ```python
@@ -297,7 +297,7 @@ plot_histogram(noisy_counts[2])
 
 
 
-![png](output_21_0.png)
+![png](images/output_21_0.png)
 
 
 
@@ -312,15 +312,15 @@ plot_histogram([mitigated_counts_2, noisy_counts[2]])
 
 
 
-![png](output_22_0.png)
+![png](images/output_22_0.png)
 
 
 
 ## Which of the following histograms most likely resembles the *error-free* counts of the same circuit?
-a) <img src="hist_3a.png" width="500"> 
-b) <img src="hist_3b.png" width="500"> 
-c) <img src="hist_3c.png" width="500"> 
-d) <img src="hist_3d.png" width="500">
+a) <img src="images/hist_3a.png" width="500"> 
+b) <img src="images/hist_3b.png" width="500"> 
+c) <img src="images/hist_3c.png" width="500"> 
+d) <img src="images/hist_3d.png" width="500">
 
 
 ```python
@@ -342,7 +342,7 @@ plot_histogram(noisy_counts[3])
 
 
 
-![png](output_26_0.png)
+![png](images/output_26_0.png)
 
 
 
@@ -357,15 +357,15 @@ plot_histogram([mitigated_counts_3, noisy_counts[3]])
 
 
 
-![png](output_27_0.png)
+![png](images/output_27_0.png)
 
 
 
 ## Which of the following histograms most likely resembles the *error-free* counts of the same circuit?
-a) <img src="hist_4a.png" width="500"> 
-b) <img src="hist_4b.png" width="500"> 
-c) <img src="hist_4c.png" width="500"> 
-d) <img src="hist_4d.png" width="500">
+a) <img src="images/hist_4a.png" width="500"> 
+b) <img src="images/hist_4b.png" width="500"> 
+c) <img src="images/hist_4c.png" width="500"> 
+d) <img src="images/hist_4d.png" width="500">
 
 
 ```python

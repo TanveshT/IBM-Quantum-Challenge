@@ -45,15 +45,15 @@ If you are interested in learning more, we refer you to [the section in the Qisk
 ### Visualizing quantum states
 We visualize quantum states throughout this exercise using what is known as a `qsphere`. Here is how the `qsphere` looks for the states $\vert0\rangle$ and $\vert1\rangle$, respectively. Note that the top-most part of the sphere represents the state $\vert0\rangle$, while the bottom represents $\vert1\rangle$.
 
-<img src="qsphere01.png" alt="qsphere with states 0 and 1" style="width: 400px;"/>
+<img src="images/qsphere01.png" alt="qsphere with states 0 and 1" style="width: 400px;"/>
 
 It should be no surprise that the superposition state with quantum phase $\phi = 0$ and probability $p = 1/2$ (meaning an equal likelihood of measuring both 0 and 1) is shown on the `qsphere` with two points. However, note also that the size of the circles at the two points is smaller than when we had simply $\vert0\rangle$ and $\vert1\rangle$ above. This is because the size of the circles is proportional to the probability of measuring each one, which is now reduced by half.
 
-<img src="qsphereplus.png" alt="qsphere with superposition 1" style="width: 200px;"/>
+<img src="images/qsphereplus.png" alt="qsphere with superposition 1" style="width: 200px;"/>
 
 In the case of superposition states, where the quantum phase is non-zero, the qsphere allows us to visualize that phase by changing the color of the respective blob. For example, the state with $\phi = 90^\circ$ (degrees) and probability $p = 1/2$ is shown in the `qsphere` below. 
 
-<img src="qspherey.png" alt="qsphere with superposition 2" style="width: 200px;"/>
+<img src="images/qspherey.png" alt="qsphere with superposition 2" style="width: 200px;"/>
 
 ### Manipulating qubits
 Qubits are manipulated by applying quantum gates. Let's go through an overview of the different gates that we will consider in the following exercises.
@@ -66,7 +66,7 @@ First, let's describe how we can change the value of $p$ for our general quantum
 
 Notice that both gates changed the value of $p$, but not $\phi$. Fortunately for us, it's quite easy to visualize the action of these gates by looking at the figure below.
 
-<img src="quantumgates.png" alt="quantum gates" style="width: 400px;"/>
+<img src="images/quantumgates.png" alt="quantum gates" style="width: 400px;"/>
 
 Once we have the state $\vert+\rangle$, we can then change the quantum phase by applying several other gates. For example, an $S$ gate adds a phase of $90$ degrees to $\phi$, while the $Z$ gate adds a phase of $180$ degrees to $\phi$. To subtract a phase of $90$ degrees, we can apply the $S^\dagger$ gate, which is read as S-dagger, and commonly written as `sdg`. Finally, there is a $Y$ gate which applies a sequence of $Z$ and $X$ gates.
 
@@ -112,7 +112,7 @@ Here are four small exercises to attain different states on the qsphere. You can
 The '(0)' indicates that we apply this gate to qubit 'q0', which is the first (and in this case only) qubit.
 
 Try to attain the given state on the qsphere in each of the following exercises.
-### I.i) Let us start  by performing a bit flip. The goal is to reach the state $\vert1\rangle$ starting from state $\vert0\rangle$. <img src="state1.png" width="300"> 
+### I.i) Let us start  by performing a bit flip. The goal is to reach the state $\vert1\rangle$ starting from state $\vert0\rangle$. <img src="images/state1.png" width="300"> 
 
 
 If you have reached the desired state with the widget, copy and paste the code from *Cell 2* into *Cell 3* (where it says "FILL YOUR CODE IN HERE") and run it to check your solution.
@@ -144,11 +144,11 @@ plot_state_qsphere(state.data, show_state_labels=True, show_state_angles=True)
 
 
 
-![png](output_5_1.png)
+![png](images/output_5_1.png)
 
 
 
-### I.ii) Next, let's create a superposition. The goal is to reach the state $|+\rangle = \frac{1}{\sqrt{2}}\left(|0\rangle + |1\rangle\right)$. <img src="stateplus.png" width="300"> 
+### I.ii) Next, let's create a superposition. The goal is to reach the state $|+\rangle = \frac{1}{\sqrt{2}}\left(|0\rangle + |1\rangle\right)$. <img src="images/stateplus.png" width="300"> 
 Fill in the code in the lines indicated in *Cell 4*. If you prefer the widget, you can still copy the code that the widget gives in *Cell 2* and paste it into *Cell 4*.
 
 
@@ -177,7 +177,7 @@ plot_state_qsphere(state.data, show_state_labels=True, show_state_angles=True)
 
 
 
-![png](output_7_1.png)
+![png]images/(output_7_1.png)
 
 
 
@@ -211,7 +211,7 @@ plot_state_qsphere(state.data, show_state_labels=True, show_state_angles=True)
 
 
 
-![png](output_9_1.png)
+![png](images/output_9_1.png)
 
 
 
@@ -244,7 +244,7 @@ plot_state_qsphere(state.data, show_state_labels=True, show_state_angles=True)
 
 
 
-![png](output_11_1.png)
+![png](images/output_11_1.png)
 
 
 
@@ -292,7 +292,7 @@ We start with the canonical two qubit gate, the controlled-NOT (also CNOT or CX)
 
 This situation changes dramatically when we first apply a Hadamard gate to the control qubit, bringing it into the superposition state $|+\rangle$.  The action of a CNOT gate on this non-classical input can produce highly entangled states between control and target qubits. If the target qubit is initially in the $|0\rangle$ state, the resulting state is denoted by $|\Phi^+\rangle$, and is one of the so-called Bell states. 
 
-### II.i) Construct the Bell state $|\Phi^+\rangle = \frac{1}{\sqrt{2}}\left(|00\rangle + |11\rangle\right)$.  <img src="phi+.png" width="300"> 
+### II.i) Construct the Bell state $|\Phi^+\rangle = \frac{1}{\sqrt{2}}\left(|00\rangle + |11\rangle\right)$.  <img src="images/phi+.png" width="300"> 
 For this state we would have probability $\frac{1}{2}$ to measure "00" and probability $\frac{1}{2}$ to measure "11". Thus, the outcomes of both qubits are perfectly correlated.
 
 
@@ -327,7 +327,7 @@ $\displaystyle (0.707+0i)|00\rangle + (0.707+0i)|11\rangle$
 
 
 
-![png](output_15_2.png)
+![png](images/output_15_2.png)
 
 
 
@@ -372,7 +372,7 @@ $\displaystyle (0.707+0i)|01\rangle + (-0.707+0i)|10\rangle$
 
 
 
-![png](output_17_2.png)
+![png](images/output_17_2.png)
 
 
 
@@ -401,12 +401,12 @@ plot_histogram(counts) # let us plot a histogram to see the possible outcomes an
 
 
 
-![png](output_19_1.png)
+![png](images/output_19_1.png)
 
 
 
 ### II.iii) You are given the quantum circuit described in the function below. Swap the states of the first and the second qubit.  
-This should be your final state: <img src="stateIIiii.png" width="300"> 
+This should be your final state: <img src="images/stateIIiii.png" width="300"> 
 
 
 ```python
@@ -441,7 +441,7 @@ $\displaystyle (0.866+0i)|01\rangle + -0.5i|11\rangle$
 
 
 
-![png](output_21_2.png)
+![png](images/output_21_2.png)
 
 
 
@@ -503,7 +503,7 @@ plot_histogram(counts)
 
 
 
-![png](output_23_2.png)
+![png](images/output_23_2.png)
 
 
 
